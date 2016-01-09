@@ -170,6 +170,11 @@
 			width: 80%
 		}
 
+hr.smallDivider{
+	margin:auto;
+	width: 80%;
+	margin-bottom: 25px;
+}
 		table#highscoreTable {
 			width: 70%;
 			font-size: 18pt;
@@ -229,14 +234,12 @@
 			height: 50px;
 			line-height: 50px;
 			margin: 10px 0px;
-
 			font-size: 20pt;
 			font-weight: 700;
 			margin-right: 10px;
 		}
 
-		div#pageNumber
-		{
+		div#pageNumber {
 			flex-basis: 200px;
 			height: 50px;
 			line-height: 50px;
@@ -253,10 +256,19 @@
 			-ms-user-select: none;
 			user-select: none;
 		}
+
+		h1.Title {
+			font-size: 50pt;
+			font-weight: bold;
+			text-align: center;
+		}
 	</style>
 </head>
 
 <body>
+	<h1 class="Title">Dodge Things</h1>
+	<hr class="smallDivider">
+
 	<div class="content">
 		<div id="unityPlayer">
 			<div class="missing">
@@ -596,7 +608,7 @@
 			Next Page
 		</div>
 		<div id="pageNumber">
-1
+			1
 		</div>
 		<div id="previousPage" class="Button noselect" onclick="showPreviousPage()">
 			Previous Page
