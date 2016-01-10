@@ -170,11 +170,13 @@
 			width: 80%
 		}
 
-hr.smallDivider{
-	margin:auto;
-	width: 80%;
-	margin-bottom: 25px;
-}
+		hr.smallDivider {
+			margin: auto;
+			width: 80%;
+			margin-bottom: 10px;
+			margin-top: 10px;
+		}
+
 		table#highscoreTable {
 			width: 70%;
 			font-size: 18pt;
@@ -257,10 +259,43 @@ hr.smallDivider{
 			user-select: none;
 		}
 
+		div#infoSeg {
+			margin-bottom: 50px;
+		}
+
+		div#highscoreBoardPlace {
+			margin-bottom: 50px;
+		}
+
 		h1.Title {
 			font-size: 50pt;
 			font-weight: bold;
 			text-align: center;
+		}
+
+		div.heading {
+			font-size: 30pt;
+			padding: 25px 0px;
+			font-weight: bold;
+		}
+
+		.selectable {
+			cursor: pointer;
+		}
+
+		.selectable:hover {
+			cursor: pointer;
+			color: grey;
+		}
+
+		.credits {
+			text-align: left;
+			width: 80%;
+			margin: auto;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			font-size: 20px;
+			font-weight: bold;
 		}
 	</style>
 </head>
@@ -281,343 +316,351 @@ hr.smallDivider{
 	<div class="instructions">
 		<br>
 		<hr>
-		<h1>Instructions</h1>
+		<div class="noselect selectable heading" id="instruc">Instructions</div>
+		<div id="infoSeg">
+			<div class="segment">
+				<img alt="Arrow Keys" src="Images/ArrowKeys.png" class="inlineImageLeft" /> WASD (or arrow keys) to control movement
 
-		<div class="segment">
-			<img alt="Arrow Keys" src="Images/ArrowKeys.png" class="inlineImageLeft" /> WASD (or arrow keys) to control movement
+				<img alt="WASD Keys" src="Images/WASDKeys.png" class="inlineImageRight" />
+			</div>
 
-			<img alt="WASD Keys" src="Images/WASDKeys.png" class="inlineImageRight" />
+			<div class="segment">
+				<img alt="Missile Launch Pad" src="Images/MissilePadsEmpty.png" class="inlineImageLeft" /> Heat seeking missiles, don't let them touch you!
+
+				<img alt="Red Missile" src="Images/MissileRed.png" class="inlineImageRight" />
+			</div>
+
+			<div class="segment">
+				<img alt="Turret Base" src="Images/Turret.png" class="inlineImageLeft" /> Cannon shells, high kinetic damage, dodge them too
+
+				<img alt="Bullet" src="Images/Bullet.png" class="inlineImageRight" />
+			</div>
+
+			<div class="segment">
+				<img alt="Key" src="Images/Key.png" class="inlineImageLeft" /> Keys, collect them to unlock doors
+
+				<img alt="Metal Door" src="Images/Door.png" class="inlineImageRight" />
+			</div>
+			<div class="segment">
+				<img alt="Repair" src="Images/Repair.png" class="inlineImageLeft" /> Repairs, collect them to improve the condition of your hull
+
+				<img alt="RepairParticle" src="Images/RepairParticles.png" class="inlineImageRight" />
+			</div>
 		</div>
 
-		<div class="segment">
-			<img alt="Missile Launch Pad" src="Images/MissilePadsEmpty.png" class="inlineImageLeft" /> Heat seeking missiles, don't let them touch you!
-
-			<img alt="Red Missile" src="Images/MissileRed.png" class="inlineImageRight" />
-		</div>
-
-		<div class="segment">
-			<img alt="Turret Base" src="Images/Turret.png" class="inlineImageLeft" /> Cannon shells, high kinetic damage, dodge them too
-
-			<img alt="Bullet" src="Images/Bullet.png" class="inlineImageRight" />
-		</div>
-
-		<div class="segment">
-			<img alt="Key" src="Images/Key.png" class="inlineImageLeft" /> Keys, collect them to unlock doors
-
-			<img alt="Metal Door" src="Images/Door.png" class="inlineImageRight" />
-		</div>
-		<div class="segment">
-			<img alt="Repair" src="Images/Repair.png" class="inlineImageLeft" /> Repairs, collect them to improve the condition of your hull
-
-			<img alt="RepairParticle" src="Images/RepairParticles.png" class="inlineImageRight" />
+	</div>
+	<hr class="smallDivider">
+	<div class="noselect selectable heading" id="leaderboardLbl">Leaderboard</div>
+	<div id="highscoreBoardPlace">
+		(Updated daily, see in game highscore board for live updated version)
+		<table id="highscoreTable">
+			<tr class="tableLable">
+				<td class="placing">
+					#
+				</td>
+				<td class="name">
+					Name
+				</td>
+				<td class="score">
+					Score
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Enable
+				</td>
+				<td class="name">
+					Enable
+				</td>
+				<td class="score">
+					Enable
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Your
+				</td>
+				<td class="name">
+					Your
+				</td>
+				<td class="score">
+					Your
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Javascript
+				</td>
+				<td class="name">
+					Javascript
+				</td>
+				<td class="score">
+					Javascript
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Please
+				</td>
+				<td class="name">
+					Please
+				</td>
+				<td class="score">
+					Please
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Enable
+				</td>
+				<td class="name">
+					Enable
+				</td>
+				<td class="score">
+					Enable
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Your
+				</td>
+				<td class="name">
+					Your
+				</td>
+				<td class="score">
+					Your
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Javascript
+				</td>
+				<td class="name">
+					Javascript
+				</td>
+				<td class="score">
+					Javascript
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Please
+				</td>
+				<td class="name">
+					Please
+				</td>
+				<td class="score">
+					Please
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Enable
+				</td>
+				<td class="name">
+					Enable
+				</td>
+				<td class="score">
+					Enable
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Your
+				</td>
+				<td class="name">
+					Your
+				</td>
+				<td class="score">
+					Your
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Javascript
+				</td>
+				<td class="name">
+					Javascript
+				</td>
+				<td class="score">
+					Javascript
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Please
+				</td>
+				<td class="name">
+					Please
+				</td>
+				<td class="score">
+					Please
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Enable
+				</td>
+				<td class="name">
+					Enable
+				</td>
+				<td class="score">
+					Enable
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Your
+				</td>
+				<td class="name">
+					Your
+				</td>
+				<td class="score">
+					Your
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Javascript
+				</td>
+				<td class="name">
+					Javascript
+				</td>
+				<td class="score">
+					Javascript
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Please
+				</td>
+				<td class="name">
+					Please
+				</td>
+				<td class="score">
+					Please
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Enable
+				</td>
+				<td class="name">
+					Enable
+				</td>
+				<td class="score">
+					Enable
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Your
+				</td>
+				<td class="name">
+					Your
+				</td>
+				<td class="score">
+					Your
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Javascript
+				</td>
+				<td class="name">
+					Javascript
+				</td>
+				<td class="score">
+					Javascript
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Please
+				</td>
+				<td class="name">
+					Please
+				</td>
+				<td class="score">
+					Please
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Enable
+				</td>
+				<td class="name">
+					Enable
+				</td>
+				<td class="score">
+					Enable
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Your
+				</td>
+				<td class="name">
+					Your
+				</td>
+				<td class="score">
+					Your
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Javascript
+				</td>
+				<td class="name">
+					Javascript
+				</td>
+				<td class="score">
+					Javascript
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Please
+				</td>
+				<td class="name">
+					Please
+				</td>
+				<td class="score">
+					Please
+				</td>
+			</tr>
+			<tr>
+				<td class="placing">
+					Enable
+				</td>
+				<td class="name">
+					Enable
+				</td>
+				<td class="score">
+					Enable
+				</td>
+			</tr>
+		</table>
+		<div id="FooterBar">
+			<div id="nextPage" class="Button noselect" onclick="showNextPage()">
+				Next Page
+			</div>
+			<div id="pageNumber">
+				1
+			</div>
+			<div id="previousPage" class="Button noselect" onclick="showPreviousPage()">
+				Previous Page
+			</div>
 		</div>
 	</div>
-	<hr class="bigDivider">
-	<h1>Leaderboard</h1>
-	(Updated daily, see in game highscore board for live updated version)
-	<table id="highscoreTable">
-		<tr class="tableLable">
-			<td class="placing">
-				#
-			</td>
-			<td class="name">
-				Name
-			</td>
-			<td class="score">
-				Score
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Enable
-			</td>
-			<td class="name">
-				Enable
-			</td>
-			<td class="score">
-				Enable
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Your
-			</td>
-			<td class="name">
-				Your
-			</td>
-			<td class="score">
-				Your
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Javascript
-			</td>
-			<td class="name">
-				Javascript
-			</td>
-			<td class="score">
-				Javascript
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Please
-			</td>
-			<td class="name">
-				Please
-			</td>
-			<td class="score">
-				Please
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Enable
-			</td>
-			<td class="name">
-				Enable
-			</td>
-			<td class="score">
-				Enable
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Your
-			</td>
-			<td class="name">
-				Your
-			</td>
-			<td class="score">
-				Your
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Javascript
-			</td>
-			<td class="name">
-				Javascript
-			</td>
-			<td class="score">
-				Javascript
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Please
-			</td>
-			<td class="name">
-				Please
-			</td>
-			<td class="score">
-				Please
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Enable
-			</td>
-			<td class="name">
-				Enable
-			</td>
-			<td class="score">
-				Enable
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Your
-			</td>
-			<td class="name">
-				Your
-			</td>
-			<td class="score">
-				Your
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Javascript
-			</td>
-			<td class="name">
-				Javascript
-			</td>
-			<td class="score">
-				Javascript
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Please
-			</td>
-			<td class="name">
-				Please
-			</td>
-			<td class="score">
-				Please
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Enable
-			</td>
-			<td class="name">
-				Enable
-			</td>
-			<td class="score">
-				Enable
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Your
-			</td>
-			<td class="name">
-				Your
-			</td>
-			<td class="score">
-				Your
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Javascript
-			</td>
-			<td class="name">
-				Javascript
-			</td>
-			<td class="score">
-				Javascript
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Please
-			</td>
-			<td class="name">
-				Please
-			</td>
-			<td class="score">
-				Please
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Enable
-			</td>
-			<td class="name">
-				Enable
-			</td>
-			<td class="score">
-				Enable
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Your
-			</td>
-			<td class="name">
-				Your
-			</td>
-			<td class="score">
-				Your
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Javascript
-			</td>
-			<td class="name">
-				Javascript
-			</td>
-			<td class="score">
-				Javascript
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Please
-			</td>
-			<td class="name">
-				Please
-			</td>
-			<td class="score">
-				Please
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Enable
-			</td>
-			<td class="name">
-				Enable
-			</td>
-			<td class="score">
-				Enable
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Your
-			</td>
-			<td class="name">
-				Your
-			</td>
-			<td class="score">
-				Your
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Javascript
-			</td>
-			<td class="name">
-				Javascript
-			</td>
-			<td class="score">
-				Javascript
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Please
-			</td>
-			<td class="name">
-				Please
-			</td>
-			<td class="score">
-				Please
-			</td>
-		</tr>
-		<tr>
-			<td class="placing">
-				Enable
-			</td>
-			<td class="name">
-				Enable
-			</td>
-			<td class="score">
-				Enable
-			</td>
-		</tr>
-	</table>
-	<div id="FooterBar">
-		<div id="nextPage" class="Button noselect" onclick="showNextPage()">
-			Next Page
-		</div>
-		<div id="pageNumber">
-			1
-		</div>
-		<div id="previousPage" class="Button noselect" onclick="showPreviousPage()">
-			Previous Page
-		</div>
+	<hr class="smallDivider">
+	<div class="credits">
+		Made by Hand Of C'thulhu
 	</div>
-
 
 </body>
 <script src="jquery.shining.js"></script>
 <script type="text/javascript" src="highscoreRetriever.js"></script>
+<script type="text/javascript" src="animation.js"></script>
 
 </html>
