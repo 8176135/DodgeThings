@@ -11,7 +11,7 @@
 		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
 		if (document.location.protocol == 'https:')
 			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		document.write('<script type="text/javascript" src="' + unityObjectUrl + '"><\/script>');
 		-->
 	</script>
 	<script type="text/javascript">
@@ -142,14 +142,14 @@
 		.inlineImageLeft {
 			position: absolute;
 			left: 20%;
-			top: 0%;
+			top: 50%;
 			transform: translate(-50%, -50%);
 		}
 
 		.inlineImageRight {
 			position: absolute;
 			right: 20%;
-			top: 0%;
+			top: 50%;
 			transform: translate(50%, -50%);
 		}
 
@@ -185,6 +185,12 @@
 			text-align: left;
 			padding-left: 20px;
 			padding-bottom: 20px;
+		}
+
+		div#leaderboardLbl {
+			border: white solid medium;
+			border-top: none;
+			border-bottom: none;
 		}
 
 		tr.tableLable {
@@ -258,13 +264,24 @@
 			-ms-user-select: none;
 			user-select: none;
 		}
-
 		div#infoSeg {
-			margin-bottom: 50px;
+			padding-bottom: 50px;
+		}
+		div#outerInfo {
+			border: white solid medium;
+			border-top: none;
+			border-bottom: none;
+			width: 80%;
+			margin: auto;
 		}
 
 		div#highscoreBoardPlace {
-			margin-bottom: 50px;
+			width: 80%;
+			margin: auto;
+			padding-bottom: 50px;
+			border: white solid medium;
+			border-top-style: none;
+			border-bottom-style: none;
 		}
 
 		h1.Title {
@@ -277,6 +294,8 @@
 			font-size: 30pt;
 			padding: 25px 0px;
 			font-weight: bold;
+			width: 80%;
+			margin: auto;
 		}
 
 		.selectable {
@@ -313,9 +332,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="instructions">
-		<br>
-		<hr>
+	<hr class="smallDivider">
+	<div id="outerInfo">
 		<div class="noselect selectable heading" id="instruc">Instructions</div>
 		<div id="infoSeg">
 			<div class="segment">
@@ -346,8 +364,23 @@
 
 				<img alt="RepairParticle" src="Images/RepairParticles.png" class="inlineImageRight" />
 			</div>
-		</div>
+			<div class="segment">
+				<img alt="Space key" src="Images/spaceKey.png" class="inlineImageLeft" />
+				Press Space to deploy flares.
+				<img alt="Flare" src="Images/Flare.png" class="inlineImageRight" />
+			</div>
+			<div class="segment">
+				<img alt="Escape key" src="Images/escKey.png" class="inlineImageLeft" />
+				Press Escape to pause/unpause, <br> and while paused, press R to restart.
+				<img alt="R key" src="Images/rKey.png" class="inlineImageRight" />
+			</div>
+			<div class="segment">
+			
+				Tip: If you find yourself sliding against a wall, <br> quickly tab s (or down arrow) to move yourself away.
 
+			</div>
+		</div>
+	</div>
 	</div>
 	<hr class="smallDivider">
 	<div class="noselect selectable heading" id="leaderboardLbl">Leaderboard</div>
@@ -449,7 +482,7 @@
 				<td class="name">
 					Please
 				</td>
-				<td class="score">
+				<td clas s="score">
 					Please
 				</td>
 			</tr>
